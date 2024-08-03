@@ -1,0 +1,183 @@
+#container {
+    display: grid;
+  
+    grid-template-areas:
+      "header header header"
+      "fillins fillins fillins"
+      "navbar navbar navbar"
+      "questionfield questionfield questionfield"
+      "answerfield answerfield answerfield"
+      "status status status"
+      "submitanswer submitanswer submitanswer"
+      "nextquestion nextquestion nextquestion";
+      
+  
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: .125fr .125fr .125fr .125fr .125fr .125fr .125fr .125fr;
+    
+  
+    height: 100vh;
+
+    text-align: center;
+
+}
+
+body{
+    font-family: 'Merriweather Sans', sans-serif;
+    background-color: rgb(10, 0, 117);
+    color: white;
+
+}
+
+#header{
+    grid-area: header;
+
+}
+
+#fillins{
+    grid-area: fillins;
+    display: grid;
+    grid-template-areas:
+    "numquestions category difficulty";
+    grid-template-columns: 33.33% 33.33% 33.33%;
+}
+#numquestions{
+    grid-area: numquestions;
+
+}
+
+#category{
+    grid-area: category;
+
+}
+
+#difficulty{
+    grid-area: difficulty;
+
+}
+
+#navbar{
+    grid-area: navbar;
+
+}
+
+#navbar button{
+    background-image: linear-gradient(to bottom, #FF5409 0%, rgb(255, 242, 1) 100%);
+    border: none;
+    color: white;
+    margin-top: 20px;
+    padding: 15px 32px;
+    width: 700px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#navbar button:disabled, button[disabled]{
+    background-image: linear-gradient(to bottom, #4a4a4a 0%, rgb(188, 188, 188) 100%);
+
+}
+
+#questionfield{
+    grid-area: questionfield;
+    display: grid;
+    margin-top: 50px;
+    grid-template-areas: "questionfieldtext questionfieldtext questionfieldimage";
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    background-image: url("media/speech.png");
+    background-repeat: no-repeat;
+    background-position: 30%;
+    background-size: 900px 300px;
+    max-width: 100%;
+    max-height: 100%;
+    
+    
+    
+
+
+}
+
+#questionfield p{
+    grid-area: questionfieldtext;
+    font-size: larger;
+    color: black;
+    margin-left: 20%;
+    padding: 80px;
+    max-width: 100%;
+    max-height: 100%;
+    
+}
+
+#questionfield img{
+    grid-area: questionfieldimage;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+    max-height: 100%;
+    box-shadow: 1px 1px 40px white;
+    float: right;
+    
+}
+
+#answerfield{
+    grid-area: answerfield;
+    margin: 10px;
+
+}
+
+#status{
+    grid-area: status;
+
+}
+
+#status p{
+    font-size: larger;
+}
+
+#submitanswer{
+    grid-area: submitanswer;
+
+}
+#submitanswer button{
+    background-image: linear-gradient(to bottom, #11ae00 0%, rgb(255, 242, 1) 100%);
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 32px;
+    width: 700px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#submitanswer button:disabled, button[disabled]{
+    background-image: linear-gradient(to bottom, #4a4a4a 0%, rgb(188, 188, 188) 100%);
+
+}
+
+#nextquestion{
+    grid-area: nextquestion;
+
+}
+#nextquestion button{
+    background-image: linear-gradient(to bottom, #0942ff 0%, rgb(149, 1, 255) 100%);
+    border: none;
+    color: white;
+    margin-top: 5px;
+    padding: 15px 32px;
+    width: 700px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+#nextquestion button:disabled, button[disabled]{
+    background-image: linear-gradient(to bottom, #4a4a4a 0%, rgb(188, 188, 188) 100%);
+
+}

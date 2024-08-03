@@ -1,0 +1,305 @@
+#container {
+    display: grid;
+  
+    grid-template-areas:
+      "navbar navbar navbar navbar"
+      "header header header header"
+      "content content content content"
+      "footer footer footer footer";
+  
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: .0625fr .125fr .5fr .125fr;
+    
+  
+    height: 205vh;
+
+    text-align: center;
+
+
+  }
+
+  #content{
+      grid-area: content;
+      display: grid;
+
+      grid-template-areas:
+      "project1 project2"
+      "project3 project4";
+
+      grid-template-columns: 50% 50%;
+      grid-template-rows: 50% 50%;
+      
+
+  }
+
+  #header{
+      grid-area: header;
+      display: grid;
+
+      grid-template-areas:
+      "headerimage headerimage headerdescription";
+
+      grid-template-columns: 25% 25% 50%;
+      
+      
+      
+      
+  }
+
+  #header img{
+      grid-area: headerimage;
+      border: 5px solid #92afd7;
+      column-span: all;
+      margin: auto;
+      
+      
+
+  }
+
+  #header p{
+      grid-area: headerdescription;
+      margin: 20px;
+      text-align: right;
+      font-style: strong;
+      font-size: 20px;
+
+
+  }
+
+  
+
+  #navbar{
+      grid-area: navbar;
+      display: grid;
+      grid-template-areas:
+      "aboutme projects contactinfo resume linkedin github";
+
+      grid-template-columns: 16.667% 16.667% 16.667% 16.667% 16.667% 16.667%;
+      background-color: #92afd7;
+      align-content: center;
+
+      
+  }
+
+  #footer{
+      grid-area: footer;
+      background-color: #92afd7;
+  }
+
+  #project1, #project2, #project3, #project4{
+      margin: 10px;
+      background-color: #92afd7;
+  }
+
+  #project1 img, #project2 img, #project3 img, #project4 img{
+    height: 350px;
+    width: 600px;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  #project1 h3, #project2 h3, #project3 h3, #project4 h3{
+    padding: 10px;
+    
+  }
+
+  #header img{
+      height: 300px;
+      width: 300px;
+  }
+
+  #aboutme{
+      grid-area: aboutme;
+  }
+  #projects{
+      grid-area: projects;
+  }
+  #contactinfo{
+      grid-area: contactinfo;
+  }
+  #github{
+      grid-area: github;
+  }
+  #linkedin{
+      grid-area: linkedin;
+  }
+  #resume{
+      grid-area: resume;
+  }
+
+
+
+  
+div {
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+body{
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: #c5d1eb;
+}
+
+@media only screen and (max-width: 600px) {
+    #container {
+        display: grid;
+      
+        grid-template-areas:
+          "navbar navbar"
+          "header header"
+          "content content"
+          "footer footer";
+      
+        grid-template-columns: 50% 50%;
+        grid-template-rows: .0625fr .125fr .5fr .125fr;
+        
+      
+        height: 205vh;
+    
+        text-align: center;
+    
+    
+      }
+      #content{
+        grid-area: content;
+        display: grid;
+  
+        grid-template-areas:
+        "project1"
+        "project2"
+        "project3"
+        "project4";
+  
+        grid-template-columns: 100%;
+        grid-template-rows: 25% 25% 25% 25%;
+        
+  
+    }
+  
+    #header{
+        grid-area: header;
+        display: grid;
+  
+        grid-template-areas:
+        "headerimage"
+        "headerdescription";
+  
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        
+        
+        
+        
+    }
+  
+    #header img{
+        grid-area: headerimage;
+        border: 5px solid #92afd7;
+        column-span: all;
+        margin: auto;
+        
+        
+  
+    }
+  
+    #header p{
+        grid-area: headerdescription;
+        margin-top: 30px;
+        text-align: center;
+        font-style: strong;
+        font-size: 20px;
+  
+  
+    }
+  
+    
+  
+    #navbar{
+        grid-area: navbar;
+        display: grid;
+        grid-template-areas:
+        "aboutme projects contactinfo"
+        "resume linkedin github";
+  
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 50% 50%;
+        background-color: #92afd7;
+        
+    }
+  
+    #footer{
+        grid-area: footer;
+        background-color: #92afd7;
+        
+        
+    }
+
+
+    #project1, #project2, #project3, #project4{
+        margin: 10px;
+        background-color: #92afd7;
+    }
+  
+    #project1 img, #project2 img, #project3 img, #project4 img{
+      height: 200px;
+      width: 250px;
+      max-width: 100%;
+      max-height: 100%;
+    }
+    #project1 h2, #project2 h2, #project3 h2, #project4 h2{
+        margin: -5px;
+        
+        
+        
+      }
+  
+    #project1 h3, #project2 h3, #project3 h3, #project4 h3{
+        margin-top: 0;
+        padding: 1px;
+        
+      
+      
+    }
+  
+    #header img{
+        height: 300px;
+        width: 300px;
+    }
+  
+    #aboutme{
+        grid-area: aboutme;
+    }
+    #projects{
+        grid-area: projects;
+    }
+    #contactinfo{
+        grid-area: contactinfo;
+    }
+    #github{
+        grid-area: github;
+    }
+    #linkedin{
+        grid-area: linkedin;
+    }
+    #resume{
+        grid-area: resume;
+    }
+  
+  
+  
+    
+  div {
+      box-sizing: border-box;
+      padding: 10px;
+      text-align: center;
+      
+      
+  }
+  
+  body{
+      font-family: 'Red Hat Display', sans-serif;
+      background-color: #c5d1eb;
+  }
+}
